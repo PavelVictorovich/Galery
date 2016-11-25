@@ -1,0 +1,258 @@
+@import "vars.sass"
+@import "header"
+
+// loads Libs SASS
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+/*** layout ***/
+.img-responsive
+	max-width: 100%
+  
+	width: 100%
+
+.logo
+	color: #000
+	display: block
+	float: left
+	font-family: "playfair-display"
+	font-size: 26px
+	text-decoration: none
+	text-transform: uppercase
+	&:hover
+		color: gray
+		text-decoration: none
+
+.blank
+	border-bottom: 2px solid black
+	float: right
+	font-size: 26px
+	line-height: 26px
+	padding-bottom: 28px
+	width: 40%
+
+/*** grid ***/
+.container
+	max-width: 768px
+	padding-left: 9px
+	padding-right: 9px
+	@media only screen and (min-width : 480px)
+		padding-left: 15px
+		padding-right: 15px
+	@media only screen and (min-width : 768px)
+		max-width: 768px
+		padding-left: 30px
+		padding-right: 30px
+
+.row
+	margin-left: -6px
+	margin-right: -6px
+	@media only screen and (min-width : 480px)
+		margin-left: 10px
+		margin-right: 10px
+	@media only screen and (min-width : 768px)
+		margin-left: 20px
+		margin-right: 20px
+
+.col
+	padding-left: 3px
+	padding-right: 3px
+	@media only screen and (min-width : 480px)
+		padding-left: 5px
+		padding-right: 5px
+	@media only screen and (min-width : 768px)
+		padding-left: 10px
+		padding-right: 10px
+	.img-responsive
+		margin-bottom: 6px
+		@media only screen and (min-width : 480px)
+			margin-bottom: 10px
+		@media only screen and (min-width : 768px)
+			margin-bottom: 20px
+		@media only screen and (min-width : 992px)
+			margin-bottom: 17px
+
+.col-xss-5
+	@media only screen and (min-width : 480px)
+		display: block
+		position: relative
+		min-height: 1px
+		float: left
+		width: 20%
+	@media only screen and (min-width : 768px)
+		max-width: none
+		width: 25%
+
+.col-xxs-hidden
+	display: block
+	position: relative
+	min-height: 1px
+	float: right
+	width: 40%
+
+.col-xxs-visible
+	display: none
+	@media only screen and (min-width : 480px)
+		display: block
+	@media only screen and (min-width : 768px)
+		width: 25%
+
+.col-xss-visible
+	@media only screen and (min-width : 480px)
+		display: none
+	@media only screen and (min-width : 768px)
+		display: none
+
+.col-xxx-visible
+	display: none
+	@media only screen and (min-width : 768px)
+		display: block
+		float: right
+	  
+.col-row-2
+	@media only screen and (min-width : 480px)
+		min-height: 228px
+		max-height: 400px
+	@media only screen and (min-width : 768px)
+		min-height: 228px
+		max-height: 400px
+
+/*** pagination ***/
+.pagination
+	list-style: none
+
+.pagination-item
+	display: inline-block
+
+.pagination-link
+	color: gray
+
+/*** data ***/
+.date
+	min-height: 100%
+	padding: 12px 0
+	width: 100%
+
+.date-has-arrow
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	.date-number
+		&:before
+			border: 4px solid transparent
+			border-left: 4px solid black
+			content: " "
+			height: 0
+			margin-top: -4px
+			position: absolute
+			right: 1px
+			top: 50%
+			width: 0
+
+.slider-holder
+	position: relative
+	padding-left: 3px
+	padding-right: 3px
+	@media only screen and (min-width : 480px)
+		padding-left: 5px
+		padding-right: 5px
+	@media only screen and (min-width : 768px)
+		padding-left: 10px
+		padding-right: 10px
+	margin-bottom: 6px
+	@media only screen and (min-width : 480px)
+		margin-bottom: 10px
+	@media only screen and (min-width : 768px)
+		margin-bottom: 20px
+
+.slider-text
+	&:after
+		border: 10px solid transparent
+		border-bottom: 10px solid #ffffff
+		content: " "
+		height: 0
+		margin-bottom: -1px
+		position: absolute
+		bottom: 12%
+		left: 50%
+		right: 1px
+		width: 0
+
+.date-positioned
+	background-color: rgba(255, 255, 255, 0.8)
+	display: inline-block
+	height: auto
+	left: 7px
+	min-height: 0
+	padding: 3px
+	position: absolute
+	top: 4px
+	width: auto
+
+.date-number
+	display: block
+	font-family: 'NotoSerif-Regular'
+	font-size: 18px
+	position: relative
+	text-align: center
+
+.date-month
+	display: block
+	font-family: 'NotoSerif-Regular'
+	font-size: 14px
+	text-align: center
+
+/*** teaser ***/
+.teaser-holder
+	margin-bottom: 6px
+	margin-top: 6px
+
+.teaser-image
+	display: block
+	margin-right: -3px
+
+.text-holder
+	background-color: #fbf6e8
+	margin-left: -3px
+	padding-left: 19px
+
+.text-small,.text-h
+	font-family: 'OpenSans-Bold'
+
+.text-s
+	color: #bebebe
+	font-size: 10px
+
+.text-h
+	font-size: 13px
+
+.text
+	font-family: 'OpenSans-Regular'
+	font-size: 12px
+
+//ALWAYS END
+@import "media"
+
